@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MM Products - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: url(./front4.jpeg) no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            background: rgba(115, 122, 117, 0.4);
+            animation: fadeIn 2s ease-in;
+        }
+
+        header img {
+            width: 80px;
+            margin-bottom: 1rem;
+            border-radius: 100px;
+        }
+
+        header h1 {
+            font-style: italic;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-family: serif;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 3rem auto;
+            background: rgba(96, 93, 93, 0.5);
+            padding: 2rem;
+            border-radius: 15px;
+            animation: slideUp 1.5s ease forwards;
+            font-family: serif;
+        }
+
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-family: serif;
+        }
+
+        .form-control {
+            margin-bottom: 1rem;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        .form-control::placeholder {
+            color: #ddd;
+        }
+        p{
+            font-family:serif ;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .btn-login {
+            width: 100%;
+            background: #28a745;
+            border: none;
+            padding: 0.75rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background 0.3s ease;
+            color: white;
+        }
+
+        .btn-login:hover {
+            background: #218838;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./images.png"  alt="MM Products Logo" >
+        
+        <h1>MM Products</h1>
+        <p>Natural Milk and Coconut  Based Products</p>
+    </header>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="about.html">
+            <input type="text" class="form-control" placeholder="Username" required />
+            <input type="password" class="form-control" placeholder="Password" required />
+            <button type="submit" class="btn-login">Log In</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+        <script src="./index.js"></script>
+</body>
+
+</html>

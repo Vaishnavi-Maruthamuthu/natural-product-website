@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MM Products - milk</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: serif;
+      background: url('./cocobg2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.371);
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 10px;
+      max-width: 1200px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-family: serif;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .product-card {
+      background: rgba(242, 237, 237, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      margin: 0.8rem 0;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .prev {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .prev a {
+      color: #011506;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #188e33;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+      background-color: #40be5e;
+
+
+    }
+
+ .flip-card {
+  perspective: 1000px;
+  height: 200px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.flip-back {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-family: serif;
+  font-size: large;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html"><i>MM Products</i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cont.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+  <div class="prev">
+    <a href="./product.html">Previous</a>
+    <a href="./coco.html">Next</a>
+    <a href="./milkprice.html">Price</a>
+  </div>
+  <div class="container">
+
+      <section id="coco">
+      <h2>Milk-Based Products</h2>
+      <section id="coco">
+  
+  <div class="product-grid">
+
+    <!-- Fresh Milk -->
+    <div class="product-card flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="./milk2.jpeg" alt="Fresh Milk">
+          <h3>Fresh Milk </h3>
+         
+        </div>
+        <div class="flip-back">
+          <p>Pure, farm-fresh milk sourced directly from healthy, grass-fed cows. Packed with natural nutrients and no added preservatives.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Curd -->
+    <div class="product-card flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="./curd2.jpeg" alt="Curd">
+          <h3>Curd</h3>
+        </div>
+        <div class="flip-back">
+          <p>Naturally cultured curd made from fresh milk. Rich in probiotics and perfect for digestion and gut health.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ghee -->
+    <div class="product-card flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="./ghee.jpeg" alt="Ghee">
+          <h3>Ghee</h3>
+        </div>
+        <div class="flip-back">
+          <p>Traditional desi ghee slow-cooked from natural butter. Full of aroma, flavor, and Ayurvedic wellness benefits.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Butter -->
+    <div class="product-card flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="./butter.jpeg" alt="Butter">
+          <h3>Butter</h3>
+        </div>
+        <div class="flip-back">
+          <p>Churned from fresh cream using traditional methods. Pure, natural, and free from chemicals and coloring.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cheese -->
+    <div class="product-card flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="./cheese.webp" alt=" Cheese">
+         
+          <h3>Cheese</h3>
+        </div>
+        <div class="flip-back">
+          <p>Naturally aged cheese crafted from wholesome milk. No artificial flavors — just pure, creamy taste.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paneer -->
+    <div class="product-card flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="./paneer.jpg" alt=" Paneer">
+          <h3> Paneer</h3>
+        </div>
+        <div class="flip-back">
+          <p>Soft and fresh paneer made from curdled milk. A protein-rich, preservative-free source of nutrition for your daily meals.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yogurt -->
+    <div class="product-card flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="./yogurt.webp" alt="Yogurt">
+          <h3>Yogurt</h3>
+        </div>
+        <div class="flip-back">
+          <p>Smooth and creamy yogurt made from pure milk. A natural source of good bacteria, ideal for a healthy lifestyle.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cream -->
+    <div class="product-card flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="./cream.png" alt="Cream ">
+          <h3> Cream </h3>
+        </div>
+        <div class="flip-back">
+          <p>Thick, fresh milk cream collected naturally without additives. Perfect for desserts, coffee, and rich cooking.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+
+  </div>
+
+</body>
+
+</html>
